@@ -1,0 +1,5 @@
+
+11.	What is an association, aggregation, and composition in UML?
+A.	Association: It is an structural relationship in which different objects are linked within the system. It exhibits the binary relationship between the objects representing an activity. It depicts the relationship between objects. It is represented by a straight line followed by an arrow which navigates the direction, and if the arrow is on both sides, then it is called as bi-directional association.
+Aggregation: It is the subset of association, which is a collection of different things. It represents has-a relationship. It is a binary relationship which means it involves only two classes. In this the child class is independent of its parent class.
+Composition: The composition is part of aggregation, and it portrays the whole-part of relationship. It depicts the relationship between composite and its parts, which means if the composite is discarded the parts of it will also be deleted. This relation exists between similar objects.

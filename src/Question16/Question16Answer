@@ -1,0 +1,2 @@
+16.	In Java 8, explain how Hasp Map internally works?
+A. Internally HashMap uses a hashCode of the key Object and this hashCode is further used by the hash function to find the index of the bucket where the new entry can be added. HashMap uses multiple buckets and each bucket points to a Singly Linked List where the entries (nodes) are stored.

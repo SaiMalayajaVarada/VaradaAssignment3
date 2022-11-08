@@ -1,0 +1,11 @@
+6.	Difference between String class and String Buffer?
+
+A.	String Class:
+a.	String class is immutable.
+b.	It is slow and consumes more memory when many strings are concatenated as it creates new instance every time.
+c.	It uses String constant pool.
+
+StringBuffer Class:
+a.	It is mutable.
+b.	It is fast and consumes less memory while string concatenation.
+c.	It uses Heap memory.

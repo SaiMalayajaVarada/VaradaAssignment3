@@ -1,0 +1,2 @@
+1.	What are generics?
+A.	Generics are the parameterized types. They allow different types of parameters like integer, string, user defined types etc. to methods, classes and interfaces. With the help of generics we can create classes that work with different data types

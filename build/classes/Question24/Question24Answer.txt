@@ -1,0 +1,6 @@
+24.	Can we call the garbage collector explicitly? Will it trigger the garbage collector?
+A. We can call the Garbage Collection explicitly in two ways
+
+System.gc() method
+Runtime.gc() method
+The java.lang.Runtime.freeMemory() method returns the amount of free memory in the Java Virtual Machine (JVM). Calling the gc() method may result in increasing the value returned by the freeMemory.

@@ -1,0 +1,2 @@
+9.	What is try with the resource? 
+A.	A resource is an object which should be closed after the program is finished with it. A try statement declared with one or more resources is called as the try with the resource. This ensures that each resource is closed at the end of the statement.

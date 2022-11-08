@@ -1,0 +1,20 @@
+14.	What are the different ways to make ArrayList methods synchronized?
+A. There are two ways to create a Synchronized ArrayList. 
+
+1. Collections.synchronizedList() method. 
+2. Using CopyOnWriteArrayList.
+
+Method 1: Using Collections.synchronizedList() method
+To do serial access, all access to the backing list must be accomplished through the returned list. It is imperative that the user manually synchronizes on the returned list when iterating over it. 
+
+Method 2: Using CopyOnWriteArrayList
+Create an empty List.
+It implements List interface.
+It is a thread-safe variant of ArrayList.
+T represents generic
+A thread-safe variant of ArrayList in which all mutative operations (e.g., add, set, remove..) are implemented by creating a separate copy of an underlying array. It achieves thread safety by creating a separate copy of the List which is different than vector or other collections used to provide thread-safety. 
+
+It is useful when you can’t or don’t want to synchronize the traversal yet need to prevent interference among concurrent threads.
+It is costly as it involves separate Array copy with every write operation(e.g., add, set, remove.)
+It is very efficient when you have List and need to traverse its elements and don’t modify it often.
+The iterator does not throw ConcurrentModificationException even if copyOnWriteArrayList is modified once the iterator is created. The iterator is iterating over the separate copy of ArrayList while a write operation is happening on another copy of ArrayList.

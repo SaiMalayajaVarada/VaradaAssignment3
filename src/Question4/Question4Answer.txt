@@ -1,0 +1,2 @@
+4.	Can we override the static and private methods? Why?
+A.	No, we cannot override the static and private methods as there is no run-time polymorphism. Static and private methods are bonded using the static binding at the compile time but the method overriding is based on the dynamic binding at the run time, because of which it is not possible to override the static and private methods.

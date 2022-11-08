@@ -1,0 +1,7 @@
+20.	What are the different states a thread will go through?
+A.	There are five thread states:
+1)	New: When a new instance of thread class is created and it has not yet entered into the execution phase the thread is said to be in New state.
+2)	Runnable : The second phase of the thread is the execution phase. When the start method is called on a new instance of thread, it enters into the Runnable state
+3)	Running:
+4)	Blocked:
+5)	Dead:

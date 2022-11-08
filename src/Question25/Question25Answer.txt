@@ -1,0 +1,145 @@
+Following are the some java 8 features –
+1. Lambda Expression
+2. Functional Interface
+3. Default Methods
+4. Streams
+5. Date/Time API Changes
+
+1. Lambda Expression
+a. It is an anonymous function.
+b.Not having name
+c. No return type and no modifiers.
+Syntax of Lambda :
+
+lambda operator (->) 
+Example –
+() -> System.out.println("Example of lambda expression!!");
+
+2. Functional Interface
+Those interfaces which contains single abstract method and n number of non-abstract method is called function interface. we define an annotation @FunctionalInterface to define the functional interface but it not mandatory but we define it then compiler understands this is the functional interface and it contains only one abstract method and if defines multiple abstract methods then the compile gives the error.
+
+Example –
+
+@FunctionalInterface
+interface interf1 
+{
+public abstract void m1();
+default void m2()
+{
+ // some code here 		
+}
+static void m3()
+{
+ // some code here 	
+}
+}
+
+3. Default Method
+Before java 8 we can’t define the method body in an Interface but in java 8 a new feature introduced where we define the body of the interface. These methods must be declared default methods. Before java 8 If a multiple class implement an interface and if we define a method then every class mandatory to implement a new method but the default method not mandatory to implemented every class.
+
+Example –
+
+interface TestInterface
+{
+    // default method
+    default void defaultMethodExample()
+    {
+        System.out.println("I am a Default method");
+    }
+}
+
+4. Streams
+Stream API is used to process collections of objects. Stream does not store the data and it doesn’t change the original data structure, they only provide the result as per the pipelined methods.
+
+Java Stream Operations
+
+forEach : forEach() is simplest and most common operation. It use to iterate the collection elements.
+import java.util.List;
+
+public class ForEachExample {
+
+    public static void main(String arr[]) {
+
+       List<String> list = List.of("A", "B" ,"C" ,"D");
+        list.forEach(ref -> System.out.println(ref));
+    }
+}
+2. collect : collect() method get the List, Set from the stream and basically it is used return the result from the streams.
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class CollectExample {
+
+    public static void main(String arr[]) {
+
+       List<Integer> list = List.of(1,2,3,4,5);
+       List<Integer> evenList = list.stream().
+       filter(x -> x*2).collect(Collectors.toList());
+       System.out.println(evenList);
+
+    }
+}
+Output – [2, 4, 6, 8, 10]
+3. filter – filter() method use used to get the element as per the condition(Predicate) passed.
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class FilterExample {
+
+    public static void main(String arr[]) {
+
+       List<Integer> list = List.of(1,2,3,4,5);
+       List<Integer> evenList = list.stream().
+       filter(x -> x%2 == 0).collect(Collectors.toList());
+        System.out.println(evenList);
+
+    }
+}
+Output – [2, 4]
+
+
+5. Date/Time API Changes
+Before java 8 date time have some problems like not thread-safe and immutable and does not have setter methods and also have less operations.
+
+In a Java 8 Date/time API fix these issues and introduce the new API under the package java.time.
+
+Local : Simplified date-time API with no complexity of timezone handling.
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
+public class DateTimeExample {
+
+    public static void main(String arr[]) {
+
+        // Get the current date
+        LocalDate currentDate = LocalDate.now();
+        System.out.println("Current Date is: " + currentDate);
+
+        // Get the current time
+        LocalTime currentTime = LocalTime.now();
+        System.out.println("Current Time is : " + currentTime);
+
+
+        // Get the current date and time
+        LocalDateTime currentDateTime = LocalDateTime.now();
+        System.out.println("Current Date & Time is : " + currentTime);
+
+    }
+}
+2. Zoned : Specialised date-time API to deal with various time zones.
+
+import java.time.ZoneId;
+
+public class ZoneExample {
+
+    public static void main(String arr[]) {
+
+        // Get the current Zone
+        ZoneId currentZone = ZoneId.systemDefault();
+        System.out.println("Current Zone is : " + currentZone);
+
+    }
+}

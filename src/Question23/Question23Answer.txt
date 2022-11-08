@@ -1,0 +1,7 @@
+23.	Do immutable classes thread safe? If yes then how?
+A. A way to make an object thread-safe is to make the object immutable. An immutable object is one whose 
+state can't be changed once the object is created.
+Immutable objects are, by their very nature, thread-safe simply because threads 
+have to be able to write to an object's instance variables to experience a read/write or 
+write/write conflict. Because no methods (only the constructor) of an immutable object actually write to the object's instance variables, the object is by definition thread-safe.
+In this approach to making an object thread-safe, you don't mark critical sections as synchronized. Instead, you separate out the critical sections that read instance variables from those that write to instance variables. The critical sections that read are left as-is. The critical sections that write must be changed so that, instead of altering the current object's instance variables, they create a new object that embodies the new state and returns a reference to that object.

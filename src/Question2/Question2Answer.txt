@@ -1,0 +1,9 @@
+2.	Can we change the scope of the overridden method in the subclass for private, public, default and protected? Explain how can it be changed for each scope?
+
+A. Yes, an overridden method can have a different access modifier but it cannot lower the access scope.
+
+The following rules for inherited methods are enforced -
+
+Methods declared public in a superclass also must be public in all subclasses.
+Methods declared protected in a superclass must either be protected or public in subclasses; they cannot be private.
+Methods declared private are not inherited at all, so there is no rule for them.

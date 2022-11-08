@@ -1,0 +1,2 @@
+8.	Can we have try without catch block in java?
+A.	Yes, we can have a try block without catch block by using final block. The final block always executes even if there is an exception in the try block.

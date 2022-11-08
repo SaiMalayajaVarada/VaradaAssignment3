@@ -1,0 +1,6 @@
+21.	What is Serialization? How do we achieve it? 
+A. Serialization in Java is an important concept that deals with the conversion of objects into a byte stream to transport the java objects from one Java Virtual Machine to the other and recreate them to the original form
+
+A Java object is serializable if and only if its class or any of its parent classes implement either the java.io.Serializable interface or its subinterface, java.io.Externalizable.
+
+In the Serialization process, we convert an object’s state into a byte stream so that it could be transferred from one JVM to the other and revert the byte stream back into the original object.

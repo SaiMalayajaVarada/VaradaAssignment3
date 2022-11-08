@@ -1,0 +1,11 @@
+17.	Difference between fail fast and fail-safe iterator?
+A. 1. fail-fast Iterators in Java
+As the name suggests fail-fast Iterators fail as soon as they realized that structure of the Collection has been changed since iteration has begun. Structural changes mean adding, removing or updating any element from the collection while one thread is Iterating over that collection. 
+
+The fail-fast behavior is implemented by keeping a modification count and if the iteration thread realizes the change in modification count it throws ConcurrentModificationException.
+
+
+2. fail-safe Iterator in java
+Contrary to fail-fast Iterator, the fail-safe iterator doesn't throw any Exception if Collection is modified structurally while one thread is Iterating over it because they work on a clone of Collection instead of the original collection and that’s why they are called a fail-safe iterator. Iterator of CopyOnWriteArrayList is an example of a fail-safe Iterator also iterator written by ConcurrentHashMap keySet is also a fail-safe iterator and never throw ConcurrentModificationException in Java.
+
+

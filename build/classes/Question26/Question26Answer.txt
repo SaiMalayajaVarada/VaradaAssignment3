@@ -1,0 +1,17 @@
+26.	How to make a pure singleton?
+A. The main object of the singleton class is to control instance or object creation, limiting the number of objects to only one. This design pattern allows only one way (entry point) to create a new instance of the class.
+Method of creating Singleton class in Java
+Eager initialization
+Lazy initialization
+
+1. Eager initialization
+Eager initialization is the easiest method to create a Singleton class. In this method instance of Singleton class is created at the time of class loading.
+
+In this initialization, we make constructor as private. So you are not allowed to other class to create a new instance of the class.
+
+For accessing this class we create one public static method to provide a single entry point. (commonly named as for getInstance()).
+
+This approach has one setback. In Eager initialization, Instance is created at the time of class loading. Other words you can say class instance is created even application might not be using it. This might be a considerable issue if you are creating a database connection or creating a socket. This may cause a memory leak problem.
+
+2. Lazy initialization
+To overcome problem eager initialization, We will create new instance of the class when needed. It just opposite of eager initialization. Here we initialized new instance of the class in getInstance() methods itself. Inside this method, we will check is there any instance of that class is already created? if yes then will return old instance if not then it creates a new instance of the class and returns them. This approach is known as Lazy initialization.

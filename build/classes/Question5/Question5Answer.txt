@@ -1,0 +1,12 @@
+5.	Difference between String Buffer and StringBuilder?
+A.	StringBuffer and StringBuilder are mutable classes. The difference between StringBuffer and StringBuilder are
+
+I.	StringBuffer :
+a.	StringBuffer was introduced in java 1.0.
+b.	StringBuffer is synchronized, which means two threads cannot call the methods of StringBuffer  class simultaneously.
+c.	It is less efficient than the StringBuider.
+
+II.	StringBuilder :
+a.	StringBuilder was introduced in java 1.5.
+b.	StringBuilder is non synchronized, which means two threads can call the methods of the StringBuilder class simultaneously.
+c.	It is more efficient than the StringBuffer class.

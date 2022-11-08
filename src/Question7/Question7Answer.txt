@@ -1,0 +1,3 @@
+
+7.	Can we declare constructor as final?
+A.	No, we cannot declare constructor as final since they are not inherited in java. The main purpose of making a method final is to prevent the modification of method from child class. In inheritance when we extend a class, the child class extends all the members of the superclass except the constructors. So declaring constructor as final throws compile error.

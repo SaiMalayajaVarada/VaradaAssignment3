@@ -1,0 +1,2 @@
+3.	What is the covariant return type? 
+A.	The return type of an overriding method is called as the covariant return type. It helps in getting the return type of an overridden method without any need to typecast or check the return type.

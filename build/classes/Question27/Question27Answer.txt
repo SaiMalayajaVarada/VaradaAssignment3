@@ -1,0 +1,2 @@
+27.	How to make a singleton synchronized?
+A. you can make getInstance() method is synchronized. While we use synchronized keyword JVM will put a lock on that at the same second thread will have to wait until the getInstance() method is completed for the first thread.

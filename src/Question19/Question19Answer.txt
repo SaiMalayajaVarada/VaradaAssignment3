@@ -1,0 +1,4 @@
+19.	What are the different ways to create a thread in java? Which one is preferred?
+A.	There are two ways to create a thread in java. They are:
+1)	By extending the thread class
+2)	By implementing runnable interface

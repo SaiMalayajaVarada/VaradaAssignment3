@@ -1,0 +1,2 @@
+18.	Can we start the thread twice?
+A.	No, we cannot start the thread twice. After starting a thread, it cannot be started again. It throws IllegalThreadStateException when we try to start thread twice
